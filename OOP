@@ -238,7 +238,7 @@ public class SmartSchoolSystem {
         }
     }
 
-  
+  New
     public static void main(String[] args) {
         Student student = new Student("Jhonmark D. Minerva");
         Teacher teacher = new Teacher("Mrs. jhaz");
@@ -255,3 +255,70 @@ public class SmartSchoolSystem {
     }
 }
 
+public class SmartSchoolSystem {
+
+
+    static class Person {
+        protected String name;
+
+        public Person(String name) {
+            this.name = name;
+        }
+
+        public void showInfo() {
+            System.out.println("Name: " + name);
+        }
+    }
+
+
+    static class Student extends Person {
+
+        public Student(String name) {
+            super(name);
+        }
+
+        public void showInfo() {
+            System.out.println("I am " + name + ", a student.");
+        }
+
+ 
+        public void sendMessage() {
+            System.out.println("Message sent to teacher.");
+        }
+
+        public void sendMessage(String msg) {
+            System.out.println("Message sent to teacher: " + msg);
+        }
+    }
+
+    static class Teacher extends Person {
+
+        public Teacher(String name) {
+            super(name);
+        }
+
+    
+        public void showInfo() {
+            System.out.println("I am " + name + ", a teacher.");
+        }
+
+        public void sendMessage() {
+            System.out.println("Message sent to students: Please study hard!");
+        }
+    }
+
+
+    public static void main(String[] args) {
+        Student student = new Student("Alice");
+        Teacher teacher = new Teacher("Mr. Reyes");
+
+        student.showInfo();
+        student.sendMessage();
+        student.sendMessage("Can I submit my assignment tomorrow?");
+
+        System.out.println();
+
+        teacher.showInfo();
+        teacher.sendMessage();
+    }
+}
