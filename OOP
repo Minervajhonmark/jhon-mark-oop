@@ -180,65 +180,11 @@ for shape in shapes:
 
 
 
-INSTRUCTIONS
 
 
 
+INHERITANCE AND COMPOSITION
 
-public class SmartSchoolSystem {
-
-  
-    static class Person {
-        protected String name; 
-
-        public Person(String name) {
-            this.name = name;
-        }
-
-        public void showInfo() {
-            System.out.println("Name: " + name);
-        }
-
-        public void sendMessage(String message) {
-            System.out.println(name + " sends a general message: " + message);
-        }
-    }
-
-
-    static class Student extends Person {
-
-        public Student(String name) {
-            super(name);
-        }
-
-    
-        public void sendMessage(String message) {
-            System.out.println("Student " + name + " says: " + message);
-        }
-    }
-
-    static class Teacher extends Person {
-
-        public Teacher(String name) {
-            super(name);
-        }
-
-      
-        public void sendMessage(String message) {
-            System.out.println("Teacher " + name + " announces: " + message);
-        }
-    }
-
-
-    static class SchoolInfo {
-        protected String schoolSecret = "Confidential: Only for school members";
-
-        protected void showSecret() {
-            System.out.println(schoolSecret);
-        }
-    }
-
-  New
     public static void main(String[] args) {
         Student student = new Student("Jhonmark D. Minerva");
         Teacher teacher = new Teacher("Mrs. jhaz");
