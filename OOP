@@ -185,25 +185,9 @@ for shape in shapes:
 
 INHERITANCE AND COMPOSITION
 
-    public static void main(String[] args) {
-        Student student = new Student("Jhonmark D. Minerva");
-        Teacher teacher = new Teacher("Mrs. jhaz");
+   public class SmartSchoolSystem {
 
-        student.showInfo();
-        student.sendMessage("Hello classmates and Goodmorning ");
-
-        teacher.showInfo();
-        teacher.sendMessage("Submit your assignments on time.");
-
-       
-        SchoolInfo info = new SchoolInfo();
-        info.showSecret();
-    }
-}
-
-public class SmartSchoolSystem {
-
-
+    
     static class Person {
         protected String name;
 
@@ -216,18 +200,19 @@ public class SmartSchoolSystem {
         }
     }
 
-
+ 
     static class Student extends Person {
 
         public Student(String name) {
             super(name);
         }
 
+       
         public void showInfo() {
             System.out.println("I am " + name + ", a student.");
         }
 
- 
+        
         public void sendMessage() {
             System.out.println("Message sent to teacher.");
         }
@@ -243,7 +228,7 @@ public class SmartSchoolSystem {
             super(name);
         }
 
-    
+        
         public void showInfo() {
             System.out.println("I am " + name + ", a teacher.");
         }
@@ -253,10 +238,9 @@ public class SmartSchoolSystem {
         }
     }
 
-
     public static void main(String[] args) {
-        Student student = new Student("Alice");
-        Teacher teacher = new Teacher("Mr. Reyes");
+        Student student = new Student("jHONMARK");
+        Teacher teacher = new Teacher("Mrs. JHAZ");
 
         student.showInfo();
         student.sendMessage();
